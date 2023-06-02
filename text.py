@@ -38,8 +38,6 @@ if f is not None:
     getsize = round((getsize/1000000),1)
     st.caption(f"The size of this file is {getsize}")
 
-    api_token = st.secrets["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"]
-
     headers = {"Authorization": f"Bearer {api_token}"}
     API_URL = "https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h"
     data = query(f)
