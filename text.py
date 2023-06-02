@@ -37,6 +37,8 @@ if f is not None:
     f.seek(old_file_position, os.SEEK_SET)
     getsize = round((getsize/1000000),1)
     st.caption(f"The size of this file is {getsize}")
+    
+    api_token = st.secrets["API_TOKEN"]
 
     headers = {"Authorization": f"Bearer {api_token}"}
     API_URL = "https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h"
